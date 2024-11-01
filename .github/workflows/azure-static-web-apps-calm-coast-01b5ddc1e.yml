@@ -45,7 +45,7 @@ jobs:
           output_location: "/" # Built app content directory - optional
           github_id_token: ${{ steps.idtoken.outputs.result }}
           skip_app_build: true       # Skip app build step
-          skip_api_build: true       # Skip API build step
+          api_language: 'node'       # Specify the language of the Azure Functions
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:

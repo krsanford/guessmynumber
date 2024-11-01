@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess My Number</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h1>Guess My Number</h1>
+
+  <!-- Admin Section -->
+  <div id="admin-section">
+    <h2>Create a New Game</h2>
+    <input type="text" id="question" placeholder="Enter your question" />
+    <input type="number" id="target-number" placeholder="Enter the target number" />
+    <select id="game-mode">
+      <option value="closest">Closest</option>
+      <option value="closest_without_over">Closest Without Going Over</option>
+    </select>
+    <button onclick="createGame()">Create Game</button>
+  </div>
+
+  <!-- Participant Section -->
+  <div id="participant-section" style="display:none;">
+    <h2>Join Game</h2>
+    <input type="text" id="guest-name" placeholder="Enter your name" />
+    <input type="number" id="guess-number" placeholder="Enter your guess" />
+    <button onclick="submitGuess()">Submit Guess</button>
+  </div>
+
+  <!-- Admin Controls -->
+  <div id="admin-controls" style="display:none;">
+    <h2>Admin Controls</h2>
+    <button onclick="stopGame()">Stop Game</button>
+    <div id="results"></div>
+  </div>
+</body>
+</html>
